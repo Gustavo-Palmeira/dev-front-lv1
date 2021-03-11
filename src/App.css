@@ -1,0 +1,137 @@
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Amazon";
+  src: url(./fonts/AmazonEmberDisplay_Bd.ttf) format("truetype");
+}
+
+.titulo {
+  text-align: center;
+  background-color: #232f3e;
+  color: #ff9900;
+  padding: 7px 0;
+  border: solid 1px #ff9900;
+  font-family: "Amazon";
+}
+
+.font-geral {
+  font-size: 14px;
+  border: solid 1px #232f3e;
+  background-color: #fff;
+  font-family: "Amazon";
+  color: #131a22;
+  padding-left: 10px;
+}
+
+.info-box {
+  max-height: 260px;
+  max-width: 100vw;
+  margin: 30px 30px;
+  display: flex;
+  border: solid 1px #232f3e;
+  background-color: #aaaaaa;
+}
+
+.foto img {
+  cursor: pointer;
+  height: 240px;
+  width: 200px;
+  margin: 10px;
+  border: solid 1px #232f3e;
+}
+
+.foto img:hover {
+  animation: translateZAnimation ease 0.7s;
+}
+
+.info-row-box {
+  position: relative;
+  width: 100%;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+}
+
+.info-sub {
+  font-size: 16px;
+  color: #000000;
+}
+
+.usuario {
+  height: 50px;
+  width: 40%;
+  margin: 10px 0;
+}
+
+.nome {
+  height: 50px;
+  width: 60%;
+  margin: 10px;
+}
+
+.email {
+  height: 50px;
+  width: 100%;
+  margin: 0 10px 0 0;
+}
+
+.bio {
+  height: 115px;
+  width: 100%;
+  margin: 10px 10px 10px 0;
+}
+
+/* Animation */
+@keyframes translateZAnimation {
+  0% {
+    transform: perspective(0px) translateZ(0px);
+  }
+  100% {
+    transform: perspective(500px) translateZ(20px);
+  }
+}
+
+/* Media query */
+@media screen and (max-width: 768px) {
+  .font-geral {
+    font-size: 12px;
+  }
+  .info-sub {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .font-geral {
+    font-size: 10px;
+  }
+  .info-box {
+    max-height: 520px;
+    margin: 15px 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  .info-row {
+    margin-left: 5px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+  }
+  .foto {
+    margin-bottom: -10px;
+    display: flex;
+    justify-content: center;
+  }
+  .info-sub {
+    font-size: 12px;
+  }
+}
